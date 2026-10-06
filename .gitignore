@@ -72,3 +72,6 @@ Plugins/**/Intermediate/*
 
 # Cache files for the editor to use
 DerivedDataCache/*
+CourseGame/Intermediate/CachedAssetRegistry/CachedAssetRegistry_0_C060F5394D839FF001DA03BE3AA4BC53.bin
+CourseGame/Intermediate/CachedAssetRegistry/CachedAssetRegistry_0_DB0ECB554FFDF1CFDB247686AEE19215.bin
+/CourseGame/Intermediate
