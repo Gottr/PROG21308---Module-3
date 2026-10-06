@@ -1,0 +1,36 @@
+WEEK 3 INDEPENDENT LAB STARTER
+
+Use THIS project for MODULE 03 / INDIVIDUAL LAB in the original Student Workbook.
+This replaces the earlier Week_03_Starter.zip for the INDEPENDENT LAB.
+No Demo Build Kit or Week 2 project is required. Do not merge this with the completed solution.
+
+GET STARTED
+1. Extract the ZIP to a writable folder. Open CourseGame/CourseGame.uproject with Unreal 5.8.3.
+2. The project includes matching Windows editor binaries. If prompted to rebuild, use an Unreal C++ development environment and Build.ps1 with your engine path.
+3. Open Content/Course/Maps/L_Week03, press Play, then click inside the game.
+4. A/D or arrows move, Space performs a basic jump, R respawns. Walk into the sphere pickup to collect it. Walls and floor block; the blue decoration does not.
+5. Stop Play before editing. The camera, art, character Blueprint, input actions/context, GameMode, HUD, pickup and spawn are already configured.
+
+DO NOT follow the earlier demo-assembly PDF Steps 1-11 on this project. Those steps built the lecture demo from Week 2; this is the independent-lab starting point.
+
+LAB TASKS - use the workbook's 60-minute sequence
+0-5 min: Verify baseline. Record Jump Z Velocity (230) and Jump Max Hold Time (0).
+5-15 min: RunnerCharacter.cpp, LAB 1: bind jump Completed and Canceled, implement EndJump, and choose a nonzero Jump Max Hold Time in BP_RunnerCharacter Class Defaults. Source defaults alone will not change an explicitly saved Blueprint override.
+15-30 min: RunnerController.cpp, LAB 2: implement ToggleMenu and update RefreshInputContext to respect menu ownership. Supplied helpers install/remove context, flush keys and gate the character. Wire them into your menu lifecycle. Tab already calls ToggleMenu; HUD already draws a panel when bMenuOpen is true. Test held-key release, resume, focus loss and respawn while the menu is open. This menu gates gameplay input; it need not pause physics.
+30-40 min: RunnerCharacter.cpp, LAB 3: implement ProbeFloor. Its call from Tick and F toggle are supplied. Label origin, direction, length and collision channel. Use it only for diagnostics, not as replacement grounding logic.
+40-55 min: Compare tap/hold jumps, wall collision and equal-duration movement at two frame caps (console: t.MaxFPS 30 and t.MaxFPS 120). Warm the scene, use the same start and duration, record distances and capture conditions, and compare within 5% or explain the discrepancy. Restore t.MaxFPS 0 afterward.
+55-60 min: Submit source/asset changes, measurement table, engine patch, reproduction steps and acceptance evidence. Explain why AddMovementInput does not multiply input by DeltaTime.
+
+EDIT AND BUILD
+Completing the C++ lab requires a working Unreal C++ toolchain (Visual Studio/MSVC and Windows SDK). Included Windows binaries let you open the baseline, but do not replace the compiler needed after source edits.
+Source/CourseGame/Gameplay/RunnerCharacter.cpp and RunnerController.cpp contain LAB 1/2/3 comments. These are C++ classes. BP_RunnerCharacter holds input references and adjustable defaults. Generate project files from the .uproject context menu if needed to open your IDE.
+Close Unreal before compiling native changes. From PowerShell in CourseGame:
+powershell -ExecutionPolicy Bypass -File .\Build.ps1 -EngineRoot "YOUR_ENGINE_FOLDER"
+Example engine folder on the instructor machine: D:\UEFN\UE_5.8.
+
+EXPECTED UNFINISHED BEHAVIOR
+Tap/hold are initially the same height, Tab does nothing, and F does not draw a trace. These are the lab tasks, not missing dependencies.
+
+CHECKS
+Tools/CheckLabAssets.py validates the initial configured assets (expects hold time zero). It is a starter-only check.
+Verify.ps1 is an optional completed-lab gameplay check; it is EXPECTED TO FAIL on untouched lab TODOs. It targets the reference settings/tolerance and is not a substitute for the workbook's manual focus/release/cancel evidence. Baseline validation was run separately with -Week03Verify -LabBaseline.

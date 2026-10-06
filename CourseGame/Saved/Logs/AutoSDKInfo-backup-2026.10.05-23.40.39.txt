@@ -1,0 +1,58 @@
+[00:00:00.347] Setting temp directory to 'C:\Users\gottr\AppData\Local\Temp\UnrealBuildTool\eb6d2d82'
+[00:00:00.360]     Registering build platform: UnrealBuildTool.AndroidPlatformFactory
+[00:00:00.386] Unable to find valid SDK(s) for Android:
+[00:00:00.386]   Found Sdk Version, MinRequired=r27c, MaxRequired=r29.
+[00:00:00.386]   Found AutoSdk Version, Required=r27c.
+[00:00:00.387]         Registering build platform: Android - buildable: False
+[00:00:00.391]     Registering build platform: UnrealBuildTool.IOSPlatformFactory
+[00:00:00.412] Unable to find valid SDK(s) for IOS:
+[00:00:00.412]   Found Sdk Version, MinRequired=1100.0.0.0, MaxRequired=8999.0.
+[00:00:00.412]   Found AutoSdk Version, Required=26.1.1.
+[00:00:00.413]         Registering build platform: IOS - buildable: False
+[00:00:00.413]     Registering build platform: UnrealBuildTool.LinuxPlatformFactory
+[00:00:00.420] Unable to find valid SDK(s) for Linux:
+[00:00:00.420]   Found Sdk Version, Required=v26_clang-20.1.8-rockylinux8.
+[00:00:00.420]   Found AutoSdk Version, Required=v26_clang-20.1.8-rockylinux8.
+[00:00:00.420]         Registering build platform: Linux - buildable: False
+[00:00:00.420]         Registering build platform: LinuxArm64 - buildable: False
+[00:00:00.420]     Registering build platform: UnrealBuildTool.MacPlatformFactory
+[00:00:00.425] Unable to find valid SDK(s) for Mac:
+[00:00:00.425]   Found Sdk Version, MinRequired=1100.0.0.0, MaxRequired=8999.0.
+[00:00:00.425]   Found AutoSdk Version, Required=26.1.1.
+[00:00:00.425]         Registering build platform: Mac - buildable: False
+[00:00:00.425]     Registering build platform: UnrealBuildTool.TVOSPlatformFactory
+[00:00:00.429] Unable to find valid SDK(s) for TVOS:
+[00:00:00.429]   Found Sdk Version, MinRequired=1100.0.0.0, MaxRequired=8999.0.
+[00:00:00.429]   Found AutoSdk Version, Required=26.1.1.
+[00:00:00.429]         Registering build platform: TVOS - buildable: False
+[00:00:00.429]     Registering build platform: UnrealBuildTool.WindowsPlatformFactory
+[00:00:00.443] Found Windows 10 SDK root at C:\Program Files (x86)\Windows Kits\10 (1)
+[00:00:00.443] Found Windows 10 SDK root at C:\Program Files (x86)\Windows Kits\10 (2)
+[00:00:00.444] Found Windows 10 SDK version 10.0.26100.0 at C:\Program Files (x86)\Windows Kits\10
+[00:00:00.445] Found Universal CRT version 10.0.26100.0 at C:\Program Files (x86)\Windows Kits\10
+[00:00:00.452] Win64 Installed SDK(s): MinVersion_Sdk=10.0.19041.0, MaxVersion_Sdk=10.9.99999.0, CurrentVersion_Sdk=10.0.26100.0, Version_AutoSdk=10.0.22621.0, CurrentVersion_AutoSdk=
+[00:00:00.452]         Registering build platform: Win64 - buildable: True
+[00:00:00.452]     Registering build platform: UnrealBuildTool.VisionOSPlatformFactory
+[00:00:00.452]         Registering build platform: VisionOS - buildable: False
+[00:00:00.456] ##PlatformValidate: Win64 VALID 10.0.22621.0
+[00:00:00.456] ##PlatformValidate: Mac INVALID 26.1.1
+[00:00:00.456] ##PlatformValidate: IOS INVALID 26.1.1
+[00:00:00.456] ##PlatformValidate: Android INVALID r27c
+[00:00:00.456] ##PlatformValidate: Linux INVALID v26_clang-20.1.8-rockylinux8
+[00:00:00.457] ##PlatformValidate: LinuxArm64 INVALID <UNKNOWN>
+[00:00:00.457] ##PlatformValidate: TVOS INVALID 26.1.1
+[00:00:00.457] ##PlatformValidate: VisionOS INVALID <UNKNOWN>
+[00:00:00.457] Unable to find required SDK version 'MainVersion' for platform LinuxArm64. Check your SDK.json files
+[00:00:00.457] Unable to find required SDK version 'MainVersion' for platform VisionOS. Check your SDK.json files
+[00:00:00.462] WriteFileIfChanged() wrote 0 changed files of 1 requested writes.
+[00:00:00.463] 
+[00:00:00.463] Timeline:
+[00:00:00.463] [  0.000]  +0.354 Main
+[00:00:00.463]    0.071          [  0.071]  +0.118 Apply XmlConfig
+[00:00:00.463]    0.195          [  0.195]  +0.038 AddTelemetry
+[00:00:00.463]    0.250          [  0.250]  +0.104 RegisterPlatforms
+[00:00:00.463] [  0.361]  +0.003 TelemetryService.FlushEvents
+[00:00:00.463] [  0.365]
+[00:00:00.463] 
+[00:00:00.463] Result: Succeeded
+[00:00:00.463] Total execution time: 0.37 seconds

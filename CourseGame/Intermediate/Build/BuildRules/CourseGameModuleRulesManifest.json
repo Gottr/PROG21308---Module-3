@@ -1,0 +1,9 @@
+{
+	"SourceFiles": [
+		"C:\\Users\\gottr\\Desktop\\PROG21308 - Module 3\\CourseGame\\Source\\CourseGameEditor\\CourseGameEditor.Build.cs",
+		"C:\\Users\\gottr\\Desktop\\PROG21308 - Module 3\\CourseGame\\Source\\CourseGame\\CourseGame.Build.cs",
+		"C:\\Users\\gottr\\Desktop\\PROG21308 - Module 3\\CourseGame\\Source\\CourseGame.Target.cs",
+		"C:\\Users\\gottr\\Desktop\\PROG21308 - Module 3\\CourseGame\\Source\\CourseGameEditor.Target.cs"
+	],
+	"EngineVersion": "5.8.3"
+}

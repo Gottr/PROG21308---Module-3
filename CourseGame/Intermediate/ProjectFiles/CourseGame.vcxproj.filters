@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="18.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\Build.ps1" />
+    <Filter Include="Config">
+      <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\CourseGame.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{F31BBDD1-B3E8-3BCC-9652-680E16935819}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\CourseGame.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\CourseGameEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Source\CourseGameEditor">
+      <UniqueIdentifier>{12AE7B2F-EE89-3828-BEDE-AC1305F52507}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\CourseGameEditor\CourseAssetLibrary.cpp">
+      <Filter>Source\CourseGameEditor</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\CourseGameEditor\CourseAssetLibrary.h">
+      <Filter>Source\CourseGameEditor</Filter>
+    </ClInclude>
+    <None Include="..\..\Source\CourseGameEditor\CourseGameEditor.Build.cs">
+      <Filter>Source\CourseGameEditor</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\CourseGameEditor\CourseGameEditor.cpp">
+      <Filter>Source\CourseGameEditor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\CourseGameEditor\CourseSpriteLibrary.cpp">
+      <Filter>Source\CourseGameEditor</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\CourseGameEditor\CourseSpriteLibrary.h">
+      <Filter>Source\CourseGameEditor</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\CourseGameEditor\Week03AssetLibrary.cpp">
+      <Filter>Source\CourseGameEditor</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\CourseGameEditor\Week03AssetLibrary.h">
+      <Filter>Source\CourseGameEditor</Filter>
+    </ClInclude>
+    <Filter Include="Source\CourseGame">
+      <UniqueIdentifier>{CA3A5958-0777-37C6-B185-10368CE0B243}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\CourseGame\CourseGame.Build.cs">
+      <Filter>Source\CourseGame</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\CourseGame\CourseGame.cpp">
+      <Filter>Source\CourseGame</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\CourseGame\CourseGame.h">
+      <Filter>Source\CourseGame</Filter>
+    </ClInclude>
+    <Filter Include="Source\CourseGame\Gameplay">
+      <UniqueIdentifier>{2484BCE1-AFE6-3E38-B78C-29A1810D1E5F}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\CourseGame\Gameplay\BeaconTestStimulus.cpp">
+      <Filter>Source\CourseGame\Gameplay</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\CourseGame\Gameplay\BeaconTestStimulus.h">
+      <Filter>Source\CourseGame\Gameplay</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\CourseGame\Gameplay\ConfigurablePickup.cpp">
+      <Filter>Source\CourseGame\Gameplay</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\CourseGame\Gameplay\ConfigurablePickup.h">
+      <Filter>Source\CourseGame\Gameplay</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\CourseGame\Gameplay\CourseBeacon.cpp">
+      <Filter>Source\CourseGame\Gameplay</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\CourseGame\Gameplay\CourseBeacon.h">
+      <Filter>Source\CourseGame\Gameplay</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\CourseGame\Gameplay\CourseGameMode.cpp">
+      <Filter>Source\CourseGame\Gameplay</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\CourseGame\Gameplay\CourseGameMode.h">
+      <Filter>Source\CourseGame\Gameplay</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\CourseGame\Gameplay\CourseRoom.cpp">
+      <Filter>Source\CourseGame\Gameplay</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\CourseGame\Gameplay\CourseRoom.h">
+      <Filter>Source\CourseGame\Gameplay</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\CourseGame\Gameplay\RunnerCharacter.cpp">
+      <Filter>Source\CourseGame\Gameplay</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\CourseGame\Gameplay\RunnerCharacter.h">
+      <Filter>Source\CourseGame\Gameplay</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\CourseGame\Gameplay\RunnerController.cpp">
+      <Filter>Source\CourseGame\Gameplay</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\CourseGame\Gameplay\RunnerController.h">
+      <Filter>Source\CourseGame\Gameplay</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\CourseGame\Gameplay\RunnerGameMode.cpp">
+      <Filter>Source\CourseGame\Gameplay</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\CourseGame\Gameplay\RunnerGameMode.h">
+      <Filter>Source\CourseGame\Gameplay</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\CourseGame\Gameplay\RunnerHUD.cpp">
+      <Filter>Source\CourseGame\Gameplay</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\CourseGame\Gameplay\RunnerHUD.h">
+      <Filter>Source\CourseGame\Gameplay</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\CourseGame\Gameplay\RunnerPickup.cpp">
+      <Filter>Source\CourseGame\Gameplay</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\CourseGame\Gameplay\RunnerPickup.h">
+      <Filter>Source\CourseGame\Gameplay</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\CourseGame\Gameplay\RunnerVerification.cpp">
+      <Filter>Source\CourseGame\Gameplay</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\CourseGame\Gameplay\RunnerVerification.h">
+      <Filter>Source\CourseGame\Gameplay</Filter>
+    </ClInclude>
+    <None Include="..\..\Verify.ps1" />
+  </ItemGroup>
+</Project>

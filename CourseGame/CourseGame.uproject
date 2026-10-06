@@ -1,0 +1,46 @@
+{
+  "EngineAssociation": "5.8",
+  "Plugins": [
+    {
+      "Enabled": true,
+      "Name": "Paper2D"
+    },
+    {
+      "Enabled": true,
+      "Name": "EnhancedInput"
+    },
+    {
+      "Enabled": true,
+      "Name": "PythonScriptPlugin",
+      "TargetAllowList": [
+        "Editor"
+      ]
+    },
+    {
+      "Enabled": true,
+      "Name": "EditorScriptingUtilities",
+      "TargetAllowList": [
+        "Editor"
+      ]
+    },
+    {
+      "Name": "AndroidFileServer",
+      "Enabled": false
+    }
+  ],
+  "Modules": [
+    {
+      "Type": "Runtime",
+      "Name": "CourseGame",
+      "LoadingPhase": "Default"
+    },
+    {
+      "Type": "Editor",
+      "Name": "CourseGameEditor",
+      "LoadingPhase": "Default"
+    }
+  ],
+  "Description": "Week 03 independent lab starter - baseline complete, three lab TODOs",
+  "FileVersion": 3,
+  "Category": "Education"
+}
