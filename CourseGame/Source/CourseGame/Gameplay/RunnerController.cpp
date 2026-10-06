@@ -37,7 +37,12 @@ void ARunnerController::RefreshInputContext()
                 if (Subsystem->HasMappingContext(InstalledContext)) return;
     RemoveInputContext();
     if (!IsLocalController() || !Runner) return;
-    // LAB 2: account for menu ownership before enabling the pawn/installing its context.
+    // LAB 2: account for menu ownership before enabling the pawn/installing its context. -- Complete
+    if (bMenuOpen)
+    {
+        Runner->SetGameplayEnabled(false);
+        return;
+    }
     Runner->SetGameplayEnabled(true);
     if (!Runner->GameplayContext) return;
     if (auto* LP=GetLocalPlayer())
@@ -66,7 +71,24 @@ void ARunnerController::ToggleMenu()
     // LAB 2: transfer control to/from the menu using bMenuOpen.
     // Update context lifetime, clear held input, gate the pawn, and set cursor/input mode.
     // The HUD panel and Tab shortcut are supplied. Do not pause the world.
-    // A replacement pawn must also respect menu ownership.
+    // A replacement pawn must also respect menu ownership. -- Complete
+    bMenuOpen=!bMenuOpen;
+    if (bMenuOpen)
+    {
+        RemoveInputContext();
+        if (auto* Runner=Cast<ARunnerCharacter>(GetPawn())) Runner->SetGameplayEnabled(false);
+        FInputModeGameAndUI Mode;
+        Mode.SetHideCursorDuringCapture(false);
+        Mode.SetLockMouseToViewportBehavior(EMouseLockMode::DoNotLock);
+        SetInputMode(Mode);
+        SetShowMouseCursor(true);
+    }
+    else
+    {
+        SetInputMode(FInputModeGameOnly());
+        SetShowMouseCursor(false);
+        RefreshInputContext();
+    }
 }
 void ARunnerController::RestartRunner()
 {
