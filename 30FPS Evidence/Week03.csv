@@ -1,0 +1,17 @@
+PossessedRunner,PASS
+MappingInstalled,PASS
+Grounded,PASS
+FloorProbe,PASS
+ThreeSecondRun,PASS
+PlaneY,PASS
+PickupCollected,PASS
+WallBlocks,PASS
+VariableHeightJump,PASS
+MenuRemovesContext,PASS
+MenuBlocksMovement,PASS
+ResumeRestoresContext,PASS
+RespawnRestoresContext,PASS
+RunDistance,344.001
+TapApex,26.989
+HoldApex,62.750
+Overall,PASS
