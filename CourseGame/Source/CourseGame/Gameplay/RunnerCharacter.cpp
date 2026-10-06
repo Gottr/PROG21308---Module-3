@@ -8,7 +8,9 @@
 #include "PaperFlipbookComponent.h"
 #include "PaperFlipbook.h"
 #include "DrawDebugHelpers.h"
+#include "Dataflow/DataflowEngineUtil.h"
 #include "UObject/ConstructorHelpers.h"
+#include "Engine/Engine.h"
 ARunnerCharacter::ARunnerCharacter()
 {
     PrimaryActorTick.bCanEverTick = true;
@@ -74,9 +76,36 @@ bool ARunnerCharacter::ProbeFloor()
 {
     // LAB 3: implement a diagnostic downward floor query here.
     // Record origin, direction, length and channel. Draw it when bShowFloorProbe is true.
-    // Keep CharacterMovement responsible for grounding.
-    bFloorProbeHit=false;
-    return false;
+    // Keep CharacterMovement responsible for grounding. -- Complete
+    constexpr float ProbeTolerance=4.0f;
+    const UCapsuleComponent* Capsule=GetCapsuleComponent();
+    const FVector Origin=Capsule->GetComponentLocation();
+    const FVector Direction=FVector(0,0,-1);
+    const float Length=Capsule->GetScaledCapsuleHalfHeight()+ProbeTolerance;
+    const FVector End=Origin+Direction*Length;
+    const ECollisionChannel Channel=Capsule->GetCollisionObjectType();
+    FCollisionQueryParams Params(SCENE_QUERY_STAT(RunnerFloorProbe),false,this);
+    FHitResult Hit;
+    bFloorProbeHit=GetWorld()->LineTraceSingleByChannel(Hit,Origin,End,Channel,Params);
+#if ENABLE_DRAW_DEBUG
+    if (bShowFloorProbe)
+    {
+        const FColor Color=bFloorProbeHit?FColor::Green:FColor::Red;
+        DrawDebugLine(GetWorld(),Origin,End,Color,false,0.0f,0,1.0f);
+        if (bFloorProbeHit)
+        {
+            DrawDebugPoint(GetWorld(),Hit.ImpactPoint,8.0f,FColor::Yellow,false,0.0f);
+        }
+        const FString Result=bFloorProbeHit
+            ? FString::Printf(TEXT("HIT %s at %.1f cm"),*GetNameSafe(Hit.GetComponent()),Hit.Distance)
+            : FString(TEXT("clear"));
+        if (GEngine)
+            GEngine->AddOnScreenDebugMessage(int32(GetUniqueID()),0.f,Color,FString::Printf(
+                TEXT("FloorProbe origin=(%.1f, %.1f, %.1f) dir=(0,0,-1) length=%.1f channel=%s -> %s"),
+                Origin.X,Origin.Y,Origin.Z,Length,*UEnum::GetValueAsString(Channel),*Result));
+    }
+#endif
+    return bFloorProbeHit;
 }
 void ARunnerCharacter::Tick(float DeltaSeconds)
 {
